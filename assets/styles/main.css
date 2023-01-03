@@ -21,6 +21,9 @@ header {
 header h1 {
   font-size: 3rem;
 }
+header button {
+  padding: 10px;
+}
 
 .planner-container {
   display: flex;
@@ -44,7 +47,7 @@ header h1 {
 .planner-container .hour-container:hover {
   background-color: rgb(230, 230, 230);
 }
-.planner-container .hour-container .hour, .planner-container .hour-container .save-button {
+.planner-container .hour-container p, .planner-container .hour-container button {
   width: 10%;
   height: 100%;
   font-size: 1rem;
@@ -52,17 +55,17 @@ header h1 {
   display: grid;
   place-items: center;
 }
-.planner-container .hour-container .save-button {
+.planner-container .hour-container button {
   border: none;
   cursor: pointer;
 }
-.planner-container .hour-container .save-button:hover {
+.planner-container .hour-container button:hover {
   background-color: rgb(200, 200, 200);
 }
-.planner-container .hour-container .save-button:active {
+.planner-container .hour-container button:active {
   background-color: rgb(180, 180, 180);
 }
-.planner-container .hour-container .notes {
+.planner-container .hour-container textarea {
   position: relative;
   width: 80%;
   height: 100%;

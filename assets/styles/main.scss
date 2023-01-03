@@ -24,6 +24,9 @@ header {
     h1 {
         font-size: 3rem;
     }
+    button {
+        padding: 10px;
+    }
 }
 
 .planner-container {
@@ -46,7 +49,7 @@ header {
         &:hover {
             background-color: rgb(230, 230, 230);
         }
-        .hour, .save-button {
+        p, button {
             width: 10%;
             height: 100%;
             font-size: 1rem;
@@ -54,17 +57,18 @@ header {
             display: grid;
             place-items: center;
         }
-        .save-button {
+        button {
             border: none;
             &:hover {
                 background-color: rgb(200, 200, 200);
             }
             &:active {
-                background-color: rgb(180, 180, 180);
+                background-color: rgb(180, 180, 180); 
+
             }
             cursor: pointer;
         }
-        .notes {
+        textarea {
             position: relative;
             width: 80%;
             height: 100%;
@@ -76,18 +80,6 @@ header {
             background-color: white;
             font-size: 0.9rem;
             resize: none;
-            // &::before {
-            //     content: 'Type your notes here.';
-            //     position: absolute;
-            //     top: 10px;
-            //     left: 10px;
-            //     opacity: 0.3;
-            // }
-            // &:focus {
-            //     &::before {
-            //         content: '';
-            //     }
-            // }
         }
     }
 }

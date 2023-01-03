@@ -21,16 +21,16 @@ function generatePlanner() {
             }
         }
         let hourContainer = document.createElement('div'); hourContainer.classList.add('hour-container'); hourContainer.innerHTML = `
-        <p class="hour" style="background-color: ${bgColor}">${getDisplayHour()}</p>
-        <textarea class="notes" placeholder="Type your notes here." id="${hour}"></textarea>
-        <button class="save-button" onclick="saveText(${hour})">SAVE</button>`
+        <p style="background-color: ${bgColor}">${getDisplayHour()}</p>
+        <textarea placeholder="Type your notes here." id="${hour}"></textarea>
+        <button onclick="saveNote(${hour})">SAVE</button>`
         document.querySelector('.planner-container').appendChild(hourContainer)
         document.getElementById(hour).value = localStorage.getItem(`note-hour-${hour}`)
     }
 }
 
 function saveNote(hour) {
-    if (hour === 100) {
+    if (hour === 'save-all') {
         for (let i = min; i < max; i++) {
             localStorage.setItem(`note-hour-${i}`, document.getElementById(i).value)
         }

@@ -52,8 +52,15 @@ header h1 {
   display: grid;
   place-items: center;
 }
+.planner-container .hour-container .save-button {
+  border: none;
+  cursor: pointer;
+}
 .planner-container .hour-container .save-button:hover {
   background-color: rgb(200, 200, 200);
+}
+.planner-container .hour-container .save-button:active {
+  background-color: rgb(180, 180, 180);
 }
 .planner-container .hour-container .notes {
   position: relative;
@@ -66,4 +73,5 @@ header h1 {
   margin: 0px 5px;
   background-color: white;
   font-size: 0.9rem;
+  resize: none;
 }/*# sourceMappingURL=main.css.map */

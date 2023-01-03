@@ -19,10 +19,16 @@ function generatePlanner() {
         }
         let hourContainer = document.createElement('div'); hourContainer.classList.add('hour-container'); hourContainer.innerHTML = `
         <p class="hour" style="background-color: ${bgColor}">${getDisplayHour()}</p>
-        <input class="notes" placeholder="Type your notes here."></input>
-        <p class="save-button">SAVE</p>`
+        <textarea class="notes" placeholder="Type your notes here." id="${hour}"></textarea>
+        <button class="save-button" onclick="saveText(${hour})">SAVE</button>`
         document.querySelector('.planner-container').appendChild(hourContainer)
+        document.getElementById(hour).value = localStorage.getItem(`note-hour-${hour}`)
     }
+}
+
+function saveText(hour) {
+    console.log(hour)
+    localStorage.setItem(`note-hour-${hour}`, document.getElementById(hour).value)
 }
 
 innit()

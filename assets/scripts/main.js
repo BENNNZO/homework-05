@@ -1,8 +1,8 @@
-let min = 8
-let max = 20
+let min = 5
+let max = 22
 
 function innit() {
-    generatePlanner(8, 20)
+    generatePlanner()
 }
 
 function generatePlanner() {
@@ -37,6 +37,11 @@ function saveNote(hour) {
     } else {
         localStorage.setItem(`note-hour-${hour}`, document.getElementById(hour).value)
     }
+}
+
+function clearAll() {
+    localStorage.clear()
+    location.reload()
 }
 
 innit()
